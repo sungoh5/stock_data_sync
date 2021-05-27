@@ -9,7 +9,7 @@ username = os.getenv('MONGO_USERNAME', 'root')
 password = os.getenv('MONGO_PASSWORD', 'mongodb')
 
 client = MongoClient(host=host,
-                     port=port,
+                     port=int(port),
                      username=username,
                      password=password,
                      authMechanism='SCRAM-SHA-1')[db]
